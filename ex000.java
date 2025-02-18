@@ -1,27 +1,23 @@
-package estruturaWhile;
+package estruturaFor;
 
 import java.util.Scanner;
 
 public class ex000 {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Digite um número: ");
-        int numero = sc.nextInt();
-        System.out.println();
+        int N = sc.nextInt();
 
-        int count = numero;
-        while (numero != 0) {
-            System.out.print("Digite outro número: ");
-            numero = sc.nextInt();
-            count = count + numero;
+        int count = 0;
+
+        for (int i=0; i<N; i++) {
+            int X = sc.nextInt();
+            count += X;
         }
 
-        System.out.printf("Parabéns você conseguiu sair do loop, a soma dos " +
-                "números que você digitou é %s", count);
-
+        System.out.printf("A soma dos números digitados é %d", count);
 
         sc.close();
     }
-
 }
